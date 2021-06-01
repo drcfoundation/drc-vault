@@ -1,0 +1,517 @@
+{
+  "contractName": "IDRCVault",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdraw",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Withdraw\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"Interface of Digital Reserve contract.\",\"events\":{\"Deposit(address,uint256)\":{\"details\":\"Emit each time a deposit action happened.\",\"params\":{\"amount\":\"DRC amount deposited.\",\"user\":\"Address made the deposit.\"}},\"Withdraw(address,uint256)\":{\"details\":\"Emit each time a withdraw action happened.\",\"params\":{\"amount\":\"DRC amount withdrawn.\",\"user\":\"Address made the withdrawal.\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol\":\"IDRCVault\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol\":{\"keccak256\":\"0x8f51ac13b62fb0a9b51a69dca9006cff9e4da8d5ce9b07f28bf0572fcf50ceef\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://2ae8fb7799a0716197ad4ad35327d45fa1f863d7bf72b3f09f78914e3569dfb4\",\"dweb:/ipfs/QmeYctFUFXgYgdTCAzEDbhS1S8jbsxQQnysUtbF4vymsW3\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: AGPL-3.0-or-later\n\npragma solidity =0.8.4;\npragma abicoder v2;\n\n/**\n * @dev Interface of Digital Reserve contract.\n */\ninterface IDRCVault {\n    /**\n     * @dev Emit each time a deposit action happened.\n     * @param user Address made the deposit.\n     * @param amount DRC amount deposited.\n     */\n    event Deposit(address indexed user, uint256 amount);\n\n    /**\n     * @dev Emit each time a withdraw action happened.\n     * @param user Address made the withdrawal.\n     * @param amount DRC amount withdrawn.\n     */\n    event Withdraw(address indexed user, uint256 amount);\n}\n",
+  "sourcePath": "/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol",
+  "ast": {
+    "absolutePath": "/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol",
+    "exportedSymbols": {
+      "IDRCVault": [
+        79
+      ]
+    },
+    "id": 80,
+    "license": "AGPL-3.0-or-later",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 62,
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "47:23:2"
+      },
+      {
+        "id": 63,
+        "literals": [
+          "abicoder",
+          "v2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "71:19:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 64,
+          "nodeType": "StructuredDocumentation",
+          "src": "92:54:2",
+          "text": " @dev Interface of Digital Reserve contract."
+        },
+        "fullyImplemented": true,
+        "id": 79,
+        "linearizedBaseContracts": [
+          79
+        ],
+        "name": "IDRCVault",
+        "nameLocation": "157:9:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 65,
+              "nodeType": "StructuredDocumentation",
+              "src": "173:153:2",
+              "text": " @dev Emit each time a deposit action happened.\n @param user Address made the deposit.\n @param amount DRC amount deposited."
+            },
+            "id": 71,
+            "name": "Deposit",
+            "nameLocation": "337:7:2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 67,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "361:4:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71,
+                  "src": "345:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 66,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "345:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 69,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "375:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71,
+                  "src": "367:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:38:2"
+            },
+            "src": "331:52:2"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 72,
+              "nodeType": "StructuredDocumentation",
+              "src": "389:157:2",
+              "text": " @dev Emit each time a withdraw action happened.\n @param user Address made the withdrawal.\n @param amount DRC amount withdrawn."
+            },
+            "id": 78,
+            "name": "Withdraw",
+            "nameLocation": "557:8:2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 77,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 74,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "582:4:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 78,
+                  "src": "566:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 73,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "566:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 76,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "596:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 78,
+                  "src": "588:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 75,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "588:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "565:38:2"
+            },
+            "src": "551:53:2"
+          }
+        ],
+        "scope": 80,
+        "src": "147:459:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "47:560:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol",
+    "exportedSymbols": {
+      "IDRCVault": [
+        79
+      ]
+    },
+    "id": 80,
+    "license": "AGPL-3.0-or-later",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 62,
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "47:23:2"
+      },
+      {
+        "id": 63,
+        "literals": [
+          "abicoder",
+          "v2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "71:19:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 64,
+          "nodeType": "StructuredDocumentation",
+          "src": "92:54:2",
+          "text": " @dev Interface of Digital Reserve contract."
+        },
+        "fullyImplemented": true,
+        "id": 79,
+        "linearizedBaseContracts": [
+          79
+        ],
+        "name": "IDRCVault",
+        "nameLocation": "157:9:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 65,
+              "nodeType": "StructuredDocumentation",
+              "src": "173:153:2",
+              "text": " @dev Emit each time a deposit action happened.\n @param user Address made the deposit.\n @param amount DRC amount deposited."
+            },
+            "id": 71,
+            "name": "Deposit",
+            "nameLocation": "337:7:2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 67,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "361:4:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71,
+                  "src": "345:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 66,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "345:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 69,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "375:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71,
+                  "src": "367:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:38:2"
+            },
+            "src": "331:52:2"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 72,
+              "nodeType": "StructuredDocumentation",
+              "src": "389:157:2",
+              "text": " @dev Emit each time a withdraw action happened.\n @param user Address made the withdrawal.\n @param amount DRC amount withdrawn."
+            },
+            "id": 78,
+            "name": "Withdraw",
+            "nameLocation": "557:8:2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 77,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 74,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "582:4:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 78,
+                  "src": "566:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 73,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "566:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 76,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "596:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 78,
+                  "src": "588:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 75,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "588:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "565:38:2"
+            },
+            "src": "551:53:2"
+          }
+        ],
+        "scope": 80,
+        "src": "147:459:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "47:560:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-06-01T03:24:38.247Z",
+  "devdoc": {
+    "details": "Interface of Digital Reserve contract.",
+    "events": {
+      "Deposit(address,uint256)": {
+        "details": "Emit each time a deposit action happened.",
+        "params": {
+          "amount": "DRC amount deposited.",
+          "user": "Address made the deposit."
+        }
+      },
+      "Withdraw(address,uint256)": {
+        "details": "Emit each time a withdraw action happened.",
+        "params": {
+          "amount": "DRC amount withdrawn.",
+          "user": "Address made the withdrawal."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
