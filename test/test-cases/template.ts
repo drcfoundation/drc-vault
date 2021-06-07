@@ -1,12 +1,12 @@
-import { DigitalReserveInstance } from "../../types/truffle-contracts";
+import { DRCVaultInstance } from "../../types/truffle-contracts";
 
-const DigitalReserve = artifacts.require("DigitalReserve");
+const DRCVault = artifacts.require("DRCVault");
 
 export const template = async (accounts: Truffle.Accounts) => {
-  let instance: DigitalReserveInstance;
+  let instance: DRCVaultInstance;
 
   before(async () => {
-    instance = await DigitalReserve.deployed();
+    instance = await DRCVault.deployed();
   });
 
   it("Should", async () => {});

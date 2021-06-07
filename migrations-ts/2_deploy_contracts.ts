@@ -1,4 +1,4 @@
-const DigitalReserve = artifacts.require("DigitalReserve");
+const DRCVault = artifacts.require("DRCVault");
 
 type Network = "development" | "ropsten" | "main";
 
@@ -10,23 +10,16 @@ module.exports = async (
   console.log(network);
 
   const drcAddress =
-    network === "ropsten"
-      ? "0x6D38D09eb9705A5Fb1b8922eA80ea89d438159C7"
-      : "0xa150Db9b1Fa65b44799d4dD949D922c0a33Ee606";
+    network === "main"
+      ? "0xa150Db9b1Fa65b44799d4dD949D922c0a33Ee606"
+      : "0x6D38D09eb9705A5Fb1b8922eA80ea89d438159C7";
 
-  await deployer.deploy(
-    DigitalReserve,
-    "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
-    drcAddress,
-    "Digital Reserve",
-    "DR-POD-S3"
-  );
+  await deployer.deploy(DRCVault, drcAddress);
 
-  const digitalReserve = await DigitalReserve.deployed();
+  const drcVault = await DRCVault.deployed();
   console.log(
-    `DigitalReserve deployed at ${digitalReserve.address} in network: ${network}.`
+    `DRCVault deployed at ${drcVault.address} in network: ${network}.`
   );
 };
 
-// because of https://stackoverflow.com/questions/40900791/cannot-redeclare-block-scoped-variable-in-unrelated-files
 export {};

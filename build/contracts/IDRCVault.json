@@ -38,9 +38,111 @@
       ],
       "name": "Withdraw",
       "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "drcAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalAmountLocked",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "holders",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Withdraw\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"Interface of Digital Reserve contract.\",\"events\":{\"Deposit(address,uint256)\":{\"details\":\"Emit each time a deposit action happened.\",\"params\":{\"amount\":\"DRC amount deposited.\",\"user\":\"Address made the deposit.\"}},\"Withdraw(address,uint256)\":{\"details\":\"Emit each time a withdraw action happened.\",\"params\":{\"amount\":\"DRC amount withdrawn.\",\"user\":\"Address made the withdrawal.\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol\":\"IDRCVault\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol\":{\"keccak256\":\"0x8f51ac13b62fb0a9b51a69dca9006cff9e4da8d5ce9b07f28bf0572fcf50ceef\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://2ae8fb7799a0716197ad4ad35327d45fa1f863d7bf72b3f09f78914e3569dfb4\",\"dweb:/ipfs/QmeYctFUFXgYgdTCAzEDbhS1S8jbsxQQnysUtbF4vymsW3\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Withdraw\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"drcAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"holders\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalAmountLocked\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface of Digital Reserve contract.\",\"events\":{\"Deposit(address,uint256)\":{\"details\":\"Emit each time a deposit action happened.\",\"params\":{\"amount\":\"DRC amount deposited.\",\"user\":\"Address made the deposit.\"}},\"Withdraw(address,uint256)\":{\"details\":\"Emit each time a withdraw action happened.\",\"params\":{\"amount\":\"DRC amount withdrawn.\",\"user\":\"Address made the withdrawal.\"}}},\"kind\":\"dev\",\"methods\":{\"balanceOf(address)\":{\"details\":\"DRC balance of an account in the Vault\",\"params\":{\"account\":\"Address of an account\"}},\"deposit(address,uint256)\":{\"details\":\"Deposit DRC to the Vault\",\"params\":{\"account\":\"Address to deposit to\",\"amount\":\"Amount of DRC to deposit\"}},\"drcAddress()\":{\"details\":\"DRC Address\"},\"holders()\":{\"details\":\"DRC Vault holder list\"},\"name()\":{\"details\":\"Name of the contract\"},\"totalAmountLocked()\":{\"details\":\"Total DRC Amount locked\"},\"withdraw(uint256)\":{\"details\":\"Withdraw DRC from the Vault\",\"params\":{\"amount\":\"Amount of DRC to withdraw\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol\":\"IDRCVault\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol\":{\"keccak256\":\"0x1e252e1e3411567e9f69aac84bbb88c087afb851c6d4cf942f57076823a1c9eb\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://2d98e05b5617cb3e096ef02317e00f3c7bba5fef0aec2de2b11488cfdefe3b9e\",\"dweb:/ipfs/Qmc8daXSKyYMPL5MP8mNGdZipNBR1oPU3LLuzXsrojQKEZ\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -48,21 +150,21 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: AGPL-3.0-or-later\n\npragma solidity =0.8.4;\npragma abicoder v2;\n\n/**\n * @dev Interface of Digital Reserve contract.\n */\ninterface IDRCVault {\n    /**\n     * @dev Emit each time a deposit action happened.\n     * @param user Address made the deposit.\n     * @param amount DRC amount deposited.\n     */\n    event Deposit(address indexed user, uint256 amount);\n\n    /**\n     * @dev Emit each time a withdraw action happened.\n     * @param user Address made the withdrawal.\n     * @param amount DRC amount withdrawn.\n     */\n    event Withdraw(address indexed user, uint256 amount);\n}\n",
+  "source": "// SPDX-License-Identifier: AGPL-3.0-or-later\n\npragma solidity =0.8.4;\npragma abicoder v2;\n\n/**\n * @dev Interface of Digital Reserve contract.\n */\ninterface IDRCVault {\n    /**\n     * @dev Emit each time a deposit action happened.\n     * @param user Address made the deposit.\n     * @param amount DRC amount deposited.\n     */\n    event Deposit(address indexed user, uint256 amount);\n\n    /**\n     * @dev Emit each time a withdraw action happened.\n     * @param user Address made the withdrawal.\n     * @param amount DRC amount withdrawn.\n     */\n    event Withdraw(address indexed user, uint256 amount);\n\n    /**\n     * @dev Name of the contract\n     */\n    function name() external pure returns (string memory);\n\n    /**\n     * @dev DRC Address\n     */\n    function drcAddress() external view returns (address);\n\n    /**\n     * @dev Total DRC Amount locked\n     */\n    function totalAmountLocked() external view returns (uint256);\n\n    /**\n     * @dev DRC balance of an account in the Vault\n     * @param account Address of an account\n     */\n    function balanceOf(address account) external view returns (uint256);\n\n    /**\n     * @dev DRC Vault holder list\n     */\n    function holders() external view returns (address[] memory);\n\n    /**\n     * @dev Deposit DRC to the Vault\n     * @param account Address to deposit to\n     * @param amount Amount of DRC to deposit\n     */\n    function deposit(address account, uint256 amount) external;\n\n    /**\n     * @dev Withdraw DRC from the Vault\n     * @param amount Amount of DRC to withdraw\n     */\n    function withdraw(uint256 amount) external;\n}\n",
   "sourcePath": "/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol",
   "ast": {
     "absolutePath": "/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol",
     "exportedSymbols": {
       "IDRCVault": [
-        79
+        354
       ]
     },
-    "id": 80,
+    "id": 355,
     "license": "AGPL-3.0-or-later",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 62,
+        "id": 290,
         "literals": [
           "solidity",
           "=",
@@ -70,16 +172,16 @@
           ".4"
         ],
         "nodeType": "PragmaDirective",
-        "src": "47:23:2"
+        "src": "47:23:1"
       },
       {
-        "id": 63,
+        "id": 291,
         "literals": [
           "abicoder",
           "v2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "71:19:2"
+        "src": "71:19:1"
       },
       {
         "abstract": false,
@@ -87,46 +189,46 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 64,
+          "id": 292,
           "nodeType": "StructuredDocumentation",
-          "src": "92:54:2",
+          "src": "92:54:1",
           "text": " @dev Interface of Digital Reserve contract."
         },
-        "fullyImplemented": true,
-        "id": 79,
+        "fullyImplemented": false,
+        "id": 354,
         "linearizedBaseContracts": [
-          79
+          354
         ],
         "name": "IDRCVault",
-        "nameLocation": "157:9:2",
+        "nameLocation": "157:9:1",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "anonymous": false,
             "documentation": {
-              "id": 65,
+              "id": 293,
               "nodeType": "StructuredDocumentation",
-              "src": "173:153:2",
+              "src": "173:153:1",
               "text": " @dev Emit each time a deposit action happened.\n @param user Address made the deposit.\n @param amount DRC amount deposited."
             },
-            "id": 71,
+            "id": 299,
             "name": "Deposit",
-            "nameLocation": "337:7:2",
+            "nameLocation": "337:7:1",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 70,
+              "id": 298,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 67,
+                  "id": 295,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "user",
-                  "nameLocation": "361:4:2",
+                  "nameLocation": "361:4:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 71,
-                  "src": "345:20:2",
+                  "scope": 299,
+                  "src": "345:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -134,10 +236,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 66,
+                    "id": 294,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "345:7:2",
+                    "src": "345:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -148,14 +250,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 69,
+                  "id": 297,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "amount",
-                  "nameLocation": "375:6:2",
+                  "nameLocation": "375:6:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 71,
-                  "src": "367:14:2",
+                  "scope": 299,
+                  "src": "367:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -163,10 +265,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 68,
+                    "id": 296,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "367:7:2",
+                    "src": "367:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -175,36 +277,36 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "344:38:2"
+              "src": "344:38:1"
             },
-            "src": "331:52:2"
+            "src": "331:52:1"
           },
           {
             "anonymous": false,
             "documentation": {
-              "id": 72,
+              "id": 300,
               "nodeType": "StructuredDocumentation",
-              "src": "389:157:2",
+              "src": "389:157:1",
               "text": " @dev Emit each time a withdraw action happened.\n @param user Address made the withdrawal.\n @param amount DRC amount withdrawn."
             },
-            "id": 78,
+            "id": 306,
             "name": "Withdraw",
-            "nameLocation": "557:8:2",
+            "nameLocation": "557:8:1",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 77,
+              "id": 305,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 74,
+                  "id": 302,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "user",
-                  "nameLocation": "582:4:2",
+                  "nameLocation": "582:4:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "566:20:2",
+                  "scope": 306,
+                  "src": "566:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -212,10 +314,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 73,
+                    "id": 301,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "566:7:2",
+                    "src": "566:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -226,14 +328,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 76,
+                  "id": 304,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "amount",
-                  "nameLocation": "596:6:2",
+                  "nameLocation": "596:6:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "588:14:2",
+                  "scope": 306,
+                  "src": "588:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -241,10 +343,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 75,
+                    "id": 303,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "588:7:2",
+                    "src": "588:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -253,31 +355,526 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "565:38:2"
+              "src": "565:38:1"
             },
-            "src": "551:53:2"
+            "src": "551:53:1"
+          },
+          {
+            "documentation": {
+              "id": 307,
+              "nodeType": "StructuredDocumentation",
+              "src": "610:44:1",
+              "text": " @dev Name of the contract"
+            },
+            "functionSelector": "06fdde03",
+            "id": 312,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "name",
+            "nameLocation": "668:4:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 308,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "672:2:1"
+            },
+            "returnParameters": {
+              "id": 311,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 310,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 312,
+                  "src": "698:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 309,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "698:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "697:15:1"
+            },
+            "scope": 354,
+            "src": "659:54:1",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 313,
+              "nodeType": "StructuredDocumentation",
+              "src": "719:35:1",
+              "text": " @dev DRC Address"
+            },
+            "functionSelector": "0964b308",
+            "id": 318,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "drcAddress",
+            "nameLocation": "768:10:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 314,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "778:2:1"
+            },
+            "returnParameters": {
+              "id": 317,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 316,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 318,
+                  "src": "804:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 315,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "804:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "803:9:1"
+            },
+            "scope": 354,
+            "src": "759:54:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 319,
+              "nodeType": "StructuredDocumentation",
+              "src": "819:47:1",
+              "text": " @dev Total DRC Amount locked"
+            },
+            "functionSelector": "230206cd",
+            "id": 324,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalAmountLocked",
+            "nameLocation": "880:17:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 320,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "897:2:1"
+            },
+            "returnParameters": {
+              "id": 323,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 322,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 324,
+                  "src": "923:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 321,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "923:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "922:9:1"
+            },
+            "scope": 354,
+            "src": "871:61:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 325,
+              "nodeType": "StructuredDocumentation",
+              "src": "938:106:1",
+              "text": " @dev DRC balance of an account in the Vault\n @param account Address of an account"
+            },
+            "functionSelector": "70a08231",
+            "id": 332,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nameLocation": "1058:9:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 327,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1076:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 332,
+                  "src": "1068:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 326,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1068:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1067:17:1"
+            },
+            "returnParameters": {
+              "id": 331,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 330,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 332,
+                  "src": "1108:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 329,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1108:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1107:9:1"
+            },
+            "scope": 354,
+            "src": "1049:68:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 333,
+              "nodeType": "StructuredDocumentation",
+              "src": "1123:45:1",
+              "text": " @dev DRC Vault holder list"
+            },
+            "functionSelector": "8188f71c",
+            "id": 339,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "holders",
+            "nameLocation": "1182:7:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 334,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1189:2:1"
+            },
+            "returnParameters": {
+              "id": 338,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 337,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 339,
+                  "src": "1215:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 335,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1215:7:1",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 336,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1215:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1214:18:1"
+            },
+            "scope": 354,
+            "src": "1173:60:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 340,
+              "nodeType": "StructuredDocumentation",
+              "src": "1239:138:1",
+              "text": " @dev Deposit DRC to the Vault\n @param account Address to deposit to\n @param amount Amount of DRC to deposit"
+            },
+            "functionSelector": "47e7ef24",
+            "id": 347,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "1391:7:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 345,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 342,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1407:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 347,
+                  "src": "1399:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 341,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1399:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 344,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1424:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 347,
+                  "src": "1416:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 343,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1416:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1398:33:1"
+            },
+            "returnParameters": {
+              "id": 346,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1440:0:1"
+            },
+            "scope": 354,
+            "src": "1382:59:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 348,
+              "nodeType": "StructuredDocumentation",
+              "src": "1447:98:1",
+              "text": " @dev Withdraw DRC from the Vault\n @param amount Amount of DRC to withdraw"
+            },
+            "functionSelector": "2e1a7d4d",
+            "id": 353,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "1559:8:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 351,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 350,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1576:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 353,
+                  "src": "1568:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 349,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1568:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1567:16:1"
+            },
+            "returnParameters": {
+              "id": 352,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1592:0:1"
+            },
+            "scope": 354,
+            "src": "1550:43:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
           }
         ],
-        "scope": 80,
-        "src": "147:459:2",
+        "scope": 355,
+        "src": "147:1448:1",
         "usedErrors": []
       }
     ],
-    "src": "47:560:2"
+    "src": "47:1549:1"
   },
   "legacyAST": {
     "absolutePath": "/Users/fayexue/if-x-github/drc-vault/contracts/interfaces/IDRCVault.sol",
     "exportedSymbols": {
       "IDRCVault": [
-        79
+        354
       ]
     },
-    "id": 80,
+    "id": 355,
     "license": "AGPL-3.0-or-later",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 62,
+        "id": 290,
         "literals": [
           "solidity",
           "=",
@@ -285,16 +882,16 @@
           ".4"
         ],
         "nodeType": "PragmaDirective",
-        "src": "47:23:2"
+        "src": "47:23:1"
       },
       {
-        "id": 63,
+        "id": 291,
         "literals": [
           "abicoder",
           "v2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "71:19:2"
+        "src": "71:19:1"
       },
       {
         "abstract": false,
@@ -302,46 +899,46 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 64,
+          "id": 292,
           "nodeType": "StructuredDocumentation",
-          "src": "92:54:2",
+          "src": "92:54:1",
           "text": " @dev Interface of Digital Reserve contract."
         },
-        "fullyImplemented": true,
-        "id": 79,
+        "fullyImplemented": false,
+        "id": 354,
         "linearizedBaseContracts": [
-          79
+          354
         ],
         "name": "IDRCVault",
-        "nameLocation": "157:9:2",
+        "nameLocation": "157:9:1",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "anonymous": false,
             "documentation": {
-              "id": 65,
+              "id": 293,
               "nodeType": "StructuredDocumentation",
-              "src": "173:153:2",
+              "src": "173:153:1",
               "text": " @dev Emit each time a deposit action happened.\n @param user Address made the deposit.\n @param amount DRC amount deposited."
             },
-            "id": 71,
+            "id": 299,
             "name": "Deposit",
-            "nameLocation": "337:7:2",
+            "nameLocation": "337:7:1",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 70,
+              "id": 298,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 67,
+                  "id": 295,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "user",
-                  "nameLocation": "361:4:2",
+                  "nameLocation": "361:4:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 71,
-                  "src": "345:20:2",
+                  "scope": 299,
+                  "src": "345:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -349,10 +946,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 66,
+                    "id": 294,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "345:7:2",
+                    "src": "345:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -363,14 +960,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 69,
+                  "id": 297,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "amount",
-                  "nameLocation": "375:6:2",
+                  "nameLocation": "375:6:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 71,
-                  "src": "367:14:2",
+                  "scope": 299,
+                  "src": "367:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -378,10 +975,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 68,
+                    "id": 296,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "367:7:2",
+                    "src": "367:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -390,36 +987,36 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "344:38:2"
+              "src": "344:38:1"
             },
-            "src": "331:52:2"
+            "src": "331:52:1"
           },
           {
             "anonymous": false,
             "documentation": {
-              "id": 72,
+              "id": 300,
               "nodeType": "StructuredDocumentation",
-              "src": "389:157:2",
+              "src": "389:157:1",
               "text": " @dev Emit each time a withdraw action happened.\n @param user Address made the withdrawal.\n @param amount DRC amount withdrawn."
             },
-            "id": 78,
+            "id": 306,
             "name": "Withdraw",
-            "nameLocation": "557:8:2",
+            "nameLocation": "557:8:1",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 77,
+              "id": 305,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 74,
+                  "id": 302,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "user",
-                  "nameLocation": "582:4:2",
+                  "nameLocation": "582:4:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "566:20:2",
+                  "scope": 306,
+                  "src": "566:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -427,10 +1024,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 73,
+                    "id": 301,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "566:7:2",
+                    "src": "566:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -441,14 +1038,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 76,
+                  "id": 304,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "amount",
-                  "nameLocation": "596:6:2",
+                  "nameLocation": "596:6:1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "588:14:2",
+                  "scope": 306,
+                  "src": "588:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -456,10 +1053,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 75,
+                    "id": 303,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "588:7:2",
+                    "src": "588:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -468,17 +1065,512 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "565:38:2"
+              "src": "565:38:1"
             },
-            "src": "551:53:2"
+            "src": "551:53:1"
+          },
+          {
+            "documentation": {
+              "id": 307,
+              "nodeType": "StructuredDocumentation",
+              "src": "610:44:1",
+              "text": " @dev Name of the contract"
+            },
+            "functionSelector": "06fdde03",
+            "id": 312,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "name",
+            "nameLocation": "668:4:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 308,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "672:2:1"
+            },
+            "returnParameters": {
+              "id": 311,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 310,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 312,
+                  "src": "698:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 309,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "698:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "697:15:1"
+            },
+            "scope": 354,
+            "src": "659:54:1",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 313,
+              "nodeType": "StructuredDocumentation",
+              "src": "719:35:1",
+              "text": " @dev DRC Address"
+            },
+            "functionSelector": "0964b308",
+            "id": 318,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "drcAddress",
+            "nameLocation": "768:10:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 314,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "778:2:1"
+            },
+            "returnParameters": {
+              "id": 317,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 316,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 318,
+                  "src": "804:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 315,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "804:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "803:9:1"
+            },
+            "scope": 354,
+            "src": "759:54:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 319,
+              "nodeType": "StructuredDocumentation",
+              "src": "819:47:1",
+              "text": " @dev Total DRC Amount locked"
+            },
+            "functionSelector": "230206cd",
+            "id": 324,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalAmountLocked",
+            "nameLocation": "880:17:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 320,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "897:2:1"
+            },
+            "returnParameters": {
+              "id": 323,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 322,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 324,
+                  "src": "923:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 321,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "923:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "922:9:1"
+            },
+            "scope": 354,
+            "src": "871:61:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 325,
+              "nodeType": "StructuredDocumentation",
+              "src": "938:106:1",
+              "text": " @dev DRC balance of an account in the Vault\n @param account Address of an account"
+            },
+            "functionSelector": "70a08231",
+            "id": 332,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nameLocation": "1058:9:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 327,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1076:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 332,
+                  "src": "1068:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 326,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1068:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1067:17:1"
+            },
+            "returnParameters": {
+              "id": 331,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 330,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 332,
+                  "src": "1108:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 329,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1108:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1107:9:1"
+            },
+            "scope": 354,
+            "src": "1049:68:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 333,
+              "nodeType": "StructuredDocumentation",
+              "src": "1123:45:1",
+              "text": " @dev DRC Vault holder list"
+            },
+            "functionSelector": "8188f71c",
+            "id": 339,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "holders",
+            "nameLocation": "1182:7:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 334,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1189:2:1"
+            },
+            "returnParameters": {
+              "id": 338,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 337,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 339,
+                  "src": "1215:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 335,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1215:7:1",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 336,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1215:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1214:18:1"
+            },
+            "scope": 354,
+            "src": "1173:60:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 340,
+              "nodeType": "StructuredDocumentation",
+              "src": "1239:138:1",
+              "text": " @dev Deposit DRC to the Vault\n @param account Address to deposit to\n @param amount Amount of DRC to deposit"
+            },
+            "functionSelector": "47e7ef24",
+            "id": 347,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "1391:7:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 345,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 342,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "1407:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 347,
+                  "src": "1399:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 341,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1399:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 344,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1424:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 347,
+                  "src": "1416:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 343,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1416:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1398:33:1"
+            },
+            "returnParameters": {
+              "id": 346,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1440:0:1"
+            },
+            "scope": 354,
+            "src": "1382:59:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 348,
+              "nodeType": "StructuredDocumentation",
+              "src": "1447:98:1",
+              "text": " @dev Withdraw DRC from the Vault\n @param amount Amount of DRC to withdraw"
+            },
+            "functionSelector": "2e1a7d4d",
+            "id": 353,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "1559:8:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 351,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 350,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1576:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 353,
+                  "src": "1568:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 349,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1568:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1567:16:1"
+            },
+            "returnParameters": {
+              "id": 352,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1592:0:1"
+            },
+            "scope": 354,
+            "src": "1550:43:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
           }
         ],
-        "scope": 80,
-        "src": "147:459:2",
+        "scope": 355,
+        "src": "147:1448:1",
         "usedErrors": []
       }
     ],
-    "src": "47:560:2"
+    "src": "47:1549:1"
   },
   "compiler": {
     "name": "solc",
@@ -486,7 +1578,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-06-01T03:24:38.247Z",
+  "updatedAt": "2021-06-07T06:04:24.714Z",
   "devdoc": {
     "details": "Interface of Digital Reserve contract.",
     "events": {
@@ -506,7 +1598,39 @@
       }
     },
     "kind": "dev",
-    "methods": {},
+    "methods": {
+      "balanceOf(address)": {
+        "details": "DRC balance of an account in the Vault",
+        "params": {
+          "account": "Address of an account"
+        }
+      },
+      "deposit(address,uint256)": {
+        "details": "Deposit DRC to the Vault",
+        "params": {
+          "account": "Address to deposit to",
+          "amount": "Amount of DRC to deposit"
+        }
+      },
+      "drcAddress()": {
+        "details": "DRC Address"
+      },
+      "holders()": {
+        "details": "DRC Vault holder list"
+      },
+      "name()": {
+        "details": "Name of the contract"
+      },
+      "totalAmountLocked()": {
+        "details": "Total DRC Amount locked"
+      },
+      "withdraw(uint256)": {
+        "details": "Withdraw DRC from the Vault",
+        "params": {
+          "amount": "Amount of DRC to withdraw"
+        }
+      }
+    },
     "version": 1
   },
   "userdoc": {

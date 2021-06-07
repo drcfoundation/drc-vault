@@ -83,6 +83,82 @@ export interface DRCVaultInstance extends Truffle.ContractInstance {
     ): Promise<number>;
   };
 
+  /**
+   * See {IDRCVault-name}.
+   */
+  name(txDetails?: Truffle.TransactionDetails): Promise<string>;
+
+  /**
+   * See {IDRCVault-drcAddress}.
+   */
+  drcAddress(txDetails?: Truffle.TransactionDetails): Promise<string>;
+
+  /**
+   * See {IDRCVault-totalAmountLocked}.
+   */
+  totalAmountLocked(txDetails?: Truffle.TransactionDetails): Promise<BN>;
+
+  /**
+   * See {IDRCVault-balanceOf}.
+   */
+  balanceOf(
+    account: string,
+    txDetails?: Truffle.TransactionDetails
+  ): Promise<BN>;
+
+  /**
+   * See {IDRCVault-holders}.
+   */
+  holders(txDetails?: Truffle.TransactionDetails): Promise<string[]>;
+
+  /**
+   * See {IDRCVault-deposit}.
+   */
+  deposit: {
+    (
+      account: string,
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<Truffle.TransactionResponse<AllEvents>>;
+    call(
+      account: string,
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<void>;
+    sendTransaction(
+      account: string,
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<string>;
+    estimateGas(
+      account: string,
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<number>;
+  };
+
+  /**
+   * See {IDRCVault-withdraw}.
+   */
+  withdraw: {
+    (
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<Truffle.TransactionResponse<AllEvents>>;
+    call(
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<void>;
+    sendTransaction(
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<string>;
+    estimateGas(
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<number>;
+  };
+
   methods: {
     /**
      * Returns the address of the current owner.
@@ -118,6 +194,82 @@ export interface DRCVaultInstance extends Truffle.ContractInstance {
       ): Promise<string>;
       estimateGas(
         newOwner: string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<number>;
+    };
+
+    /**
+     * See {IDRCVault-name}.
+     */
+    name(txDetails?: Truffle.TransactionDetails): Promise<string>;
+
+    /**
+     * See {IDRCVault-drcAddress}.
+     */
+    drcAddress(txDetails?: Truffle.TransactionDetails): Promise<string>;
+
+    /**
+     * See {IDRCVault-totalAmountLocked}.
+     */
+    totalAmountLocked(txDetails?: Truffle.TransactionDetails): Promise<BN>;
+
+    /**
+     * See {IDRCVault-balanceOf}.
+     */
+    balanceOf(
+      account: string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<BN>;
+
+    /**
+     * See {IDRCVault-holders}.
+     */
+    holders(txDetails?: Truffle.TransactionDetails): Promise<string[]>;
+
+    /**
+     * See {IDRCVault-deposit}.
+     */
+    deposit: {
+      (
+        account: string,
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<Truffle.TransactionResponse<AllEvents>>;
+      call(
+        account: string,
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<void>;
+      sendTransaction(
+        account: string,
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<string>;
+      estimateGas(
+        account: string,
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<number>;
+    };
+
+    /**
+     * See {IDRCVault-withdraw}.
+     */
+    withdraw: {
+      (
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<Truffle.TransactionResponse<AllEvents>>;
+      call(
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<void>;
+      sendTransaction(
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<string>;
+      estimateGas(
+        amount: number | BN | string,
         txDetails?: Truffle.TransactionDetails
       ): Promise<number>;
     };

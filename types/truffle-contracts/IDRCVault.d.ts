@@ -32,7 +32,167 @@ export interface Withdraw {
 type AllEvents = Deposit | Withdraw;
 
 export interface IDRCVaultInstance extends Truffle.ContractInstance {
-  methods: {};
+  /**
+   * Name of the contract
+   */
+  name(txDetails?: Truffle.TransactionDetails): Promise<string>;
+
+  /**
+   * DRC Address
+   */
+  drcAddress(txDetails?: Truffle.TransactionDetails): Promise<string>;
+
+  /**
+   * Total DRC Amount locked
+   */
+  totalAmountLocked(txDetails?: Truffle.TransactionDetails): Promise<BN>;
+
+  /**
+   * DRC balance of an account in the Vault
+   * @param account Address of an account
+   */
+  balanceOf(
+    account: string,
+    txDetails?: Truffle.TransactionDetails
+  ): Promise<BN>;
+
+  /**
+   * DRC Vault holder list
+   */
+  holders(txDetails?: Truffle.TransactionDetails): Promise<string[]>;
+
+  /**
+   * Deposit DRC to the Vault
+   * @param account Address to deposit to
+   * @param amount Amount of DRC to deposit
+   */
+  deposit: {
+    (
+      account: string,
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<Truffle.TransactionResponse<AllEvents>>;
+    call(
+      account: string,
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<void>;
+    sendTransaction(
+      account: string,
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<string>;
+    estimateGas(
+      account: string,
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<number>;
+  };
+
+  /**
+   * Withdraw DRC from the Vault
+   * @param amount Amount of DRC to withdraw
+   */
+  withdraw: {
+    (
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<Truffle.TransactionResponse<AllEvents>>;
+    call(
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<void>;
+    sendTransaction(
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<string>;
+    estimateGas(
+      amount: number | BN | string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<number>;
+  };
+
+  methods: {
+    /**
+     * Name of the contract
+     */
+    name(txDetails?: Truffle.TransactionDetails): Promise<string>;
+
+    /**
+     * DRC Address
+     */
+    drcAddress(txDetails?: Truffle.TransactionDetails): Promise<string>;
+
+    /**
+     * Total DRC Amount locked
+     */
+    totalAmountLocked(txDetails?: Truffle.TransactionDetails): Promise<BN>;
+
+    /**
+     * DRC balance of an account in the Vault
+     * @param account Address of an account
+     */
+    balanceOf(
+      account: string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<BN>;
+
+    /**
+     * DRC Vault holder list
+     */
+    holders(txDetails?: Truffle.TransactionDetails): Promise<string[]>;
+
+    /**
+     * Deposit DRC to the Vault
+     * @param account Address to deposit to
+     * @param amount Amount of DRC to deposit
+     */
+    deposit: {
+      (
+        account: string,
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<Truffle.TransactionResponse<AllEvents>>;
+      call(
+        account: string,
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<void>;
+      sendTransaction(
+        account: string,
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<string>;
+      estimateGas(
+        account: string,
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<number>;
+    };
+
+    /**
+     * Withdraw DRC from the Vault
+     * @param amount Amount of DRC to withdraw
+     */
+    withdraw: {
+      (
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<Truffle.TransactionResponse<AllEvents>>;
+      call(
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<void>;
+      sendTransaction(
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<string>;
+      estimateGas(
+        amount: number | BN | string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<number>;
+    };
+  };
 
   getPastEvents(event: string): Promise<EventData[]>;
   getPastEvents(
