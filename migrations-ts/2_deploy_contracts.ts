@@ -17,9 +17,11 @@ module.exports = async (
   await deployer.deploy(DRCVault, drcAddress);
 
   const drcVault = await DRCVault.deployed();
+
   console.log(
     `DRCVault deployed at ${drcVault.address} in network: ${network}.`
   );
 };
 
 export {};
+// 0xb735d2531Ca4Aa0FC7C6354eB8BF4075102D44DF

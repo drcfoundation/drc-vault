@@ -30,23 +30,24 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(
           mnemonic,
-          `https://ropsten.infura.io/v3/${infuraKey}`
+          `wss://ropsten.infura.io/ws/v3/${infuraKey}`
         ),
       network_id: 3,
-      gas: 5500000,
+      gasPrice: 100000000000,
       confirmations: 2,
       from: fromAddress,
+      networkCheckTimeout: 1000000,
     },
     main: {
       provider: () =>
         new HDWalletProvider(
           mnemonic,
-          `https://mainnet.infura.io/v3/${infuraKey}`
+          `wss://mainnet.infura.io/ws/v3/${infuraKey}`
         ),
       network_id: 1,
-      gas: 6000000,
-      gasPrice: 130000000000,
+      gasPrice: 15000000000,
       confirmations: 2,
+      networkCheckTimeout: 1000000,
     },
   },
 
